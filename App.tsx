@@ -11,8 +11,8 @@ import {
       Archivo_500Medium,
       Archivo_600SemiBold
 } from '@expo-google-fonts/archivo'
-import { CarDetails } from './src/screens/CarDetails';
 import theme from './src/styles/theme';
+import { SchedulingComplete } from './src/screens/SchedulingComplete';
 
 
 
@@ -33,7 +33,7 @@ export default function App() {
   Splashscreen.hideAsync();
   return (
   <ThemeProvider theme={theme}>
-    <CarDetails />
+    <SchedulingComplete />
   </ThemeProvider>
   )
 }

@@ -1,4 +1,7 @@
 import React from 'react';
+import { Feather } from '@expo/vector-icons'
+import { RFValue } from 'react-native-responsive-fontsize';
+import { useTheme } from 'styled-components';
 
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
@@ -24,13 +27,26 @@ import {
     Rent,
     Period,
     Price,
-    About,
     Acessories,
-    Footer
+    Footer,
+    RentalPeriod,
+    CalendarIcon,
+    DateInfo,
+    DateTitle,
+    DateValue,
+    RentalPrice,
+    RentalPriceLabel,
+    RentalPriceDetails,
+    RentalPriceQuota,
+    RentalPriceTotal,
+
 } from './styles';
 
 
-export function CarDetails() {
+
+
+export function SchedulingDetails() {
+    const theme = useTheme();
  return (
     <Container>
         <Header>
@@ -64,10 +80,38 @@ export function CarDetails() {
                 <Accessory name="Auto" icon={exchangeSvg}/>
                 <Accessory name="2 pessoas" icon={peopleSvg}/>
             </Acessories>
-            <About> 
-                Este é automóvel desportivo. Surgiu do lendário touro de lide indultado na praça Real Maestranza de Sevilla. É um belíssimo carro para quem gosta de acelerar.
-            </About>
-            
+
+            <RentalPeriod>
+                <CalendarIcon>
+                    <Feather 
+                        name='calendar'
+                        size={RFValue(24)}
+                        color={theme.colors.shape}
+                    />
+                </CalendarIcon>
+
+                <DateInfo>
+                    <DateTitle>DE</DateTitle>
+                    <DateValue>19/05/2023</DateValue>
+                </DateInfo>
+
+                <Feather 
+                        name='chevron-right'
+                        size={RFValue(10)}
+                        color={theme.colors.text}
+                    />
+                <DateInfo>
+                    <DateTitle>DE</DateTitle>
+                    <DateValue>19/05/2023</DateValue>
+                </DateInfo>    
+            </RentalPeriod>
+          <RentalPrice>
+            <RentalPriceLabel>TOTAL</RentalPriceLabel>
+            <RentalPriceDetails>
+                <RentalPriceQuota>R$ 580 x3 diárias</RentalPriceQuota>
+                <RentalPriceTotal>R$ 2.900</RentalPriceTotal>
+            </RentalPriceDetails>
+          </RentalPrice> 
         </Content>
 
         <Footer>
