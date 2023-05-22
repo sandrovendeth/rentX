@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler'
 import React from 'react';
 import * as Splashscreen from 'expo-splash-screen';
 import { ThemeProvider } from 'styled-components';
@@ -12,7 +13,7 @@ import {
       Archivo_600SemiBold
 } from '@expo-google-fonts/archivo'
 import theme from './src/styles/theme';
-import { SchedulingComplete } from './src/screens/SchedulingComplete';
+import { Routes } from './src/routes';
 
 
 
@@ -33,7 +34,7 @@ export default function App() {
   Splashscreen.hideAsync();
   return (
   <ThemeProvider theme={theme}>
-    <SchedulingComplete />
+    <Routes />
   </ThemeProvider>
   )
 }
