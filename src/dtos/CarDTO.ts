@@ -16,3 +16,4 @@ export interface CarDTO {
       
     photos: string[]
   }
+  
