@@ -22,8 +22,8 @@ import {
     CarWrapper,
     CarFooter,
     CarFooterTitle,
-    CarFooterTitlePeriod,
-    CarFooterDate,
+    CarFooterTitlePeriod, //biblioteca
+    CarFooterDate, 
 
 } from "./styles";
 
