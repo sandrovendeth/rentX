@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler'
+
 import React from 'react';
 import * as Splashscreen from 'expo-splash-screen';
 import { ThemeProvider } from 'styled-components';
